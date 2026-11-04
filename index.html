@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>수빈 하우스 집들이 시즌 2 (with 효익 & 콩이) ✨</title>
+  
+  <!-- 오픈그래프(OG) 메타태그 (카카오톡 공유 최적화) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="🏡 수빈 하우스 집들이 시즌 2 (feat. 효익 & 15kg 쫄보 콩이)">
+  <meta property="og:description" content="1차 완벽 성료 후 호스트 레벨업 완료! 이번 주는 윤희 & 짝꿍님을 위해 더 여유롭고 맛있게 모십니다 🤍">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1200&q=80">
+  <meta name="description" content="수빈이의 보금자리 집들이 시즌 2 모바일 초대장">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Pretendard 웹폰트 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
+          },
+          colors: {
+            warm: {
+              50: '#FDFBF7',
+              100: '#F7F3EB',
+              200: '#EFE8DC',
+              300: '#E0D4C1',
+              400: '#C7B59D',
+              500: '#AA9478',
+              600: '#8C775B',
+              700: '#6C5A43',
+              800: '#4D4030',
+              900: '#33291F',
+            },
+            point: {
+              terracotta: '#D46A43',
+              sage: '#6E8A73',
+              mocha: '#8C7A6B',
+              amber: '#D97706',
+            }
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -5px rgba(140, 122, 107, 0.07), 0 4px 10px -2px rgba(140, 122, 107, 0.03)',
+            'card': '0 4px 20px -2px rgba(90, 75, 60, 0.06)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background-color: #F4EFEB;
+      color: #38322B;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+    }
+    html { scroll-behavior: smooth; }
+    .toast-enter { transform: translate(-50%, 120%); opacity: 0; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+    .toast-show { transform: translate(-50%, 0); opacity: 1; }
+  </style>
+
+  <!-- ================================================================= -->
+  <!-- ⭐️ [초간단 설정 영역] 이 부분의 텍스트만 변경하면 페이지 전체에 즉시 반영됩니다! ⭐️ -->
+  <!-- ================================================================= -->
+  <script>
+    const CONFIG = {
+      // 1. 호스트 & 게스트
+      hostName: "수빈",
+      helperName: "효익",
+      dogName: "콩이",
+      guestNames: "윤희 & 윤희 짝꿍님",
+      headerSubtitle: "HOUSEWARMING PART 2",
+      mainTitle: "수빈 하우스 집들이\n시즌 2에 초대합니다 🌿",
+      subTitle: "지난주 1차 완벽 성료! 이번 주는 윤희 커플 맞이 집들이 시즌 2 ✨",
+
+      // 2. 일시 정보
+      date: "2026년 11월 7일 (토)",
+      time: "오후 6:00 (18:00)",
+      
+      // 3. 주소 정보
+      address: "인천광역시 남동구 만수로94번길 21 캐슬베리 403호",
+      
+      // 4. 주차 상세 안내 & 다이소 골목 꿀팁
+      parkingTitle: "주차 안내 & 골목 주차 꿀팁 🚗",
+      parkingTip: "건물 내 1층에 주차가 가능하나 자리가 협소하거나 꽉 차 있을 수 있습니다. 인근 다이소에서 집으로 걸어오는 길목 골목길에 주차 공간이 있으니 참고해 주세요!",
+
+      // 5. 식사 안내 (홈쿡 vs 배달 취향존)
+      foodNoticeTitle: "정성 홈쿡 🍳 vs 배달 맛집 🍕 취향존",
+      foodNotice: "정성 홈쿡 요리 🍳 vs 배달 맛집 🍕 모두 가능! 원하는 메뉴 편하게 말해주세요 :) 저희가 직접 요리해 드릴 수도 있고, 편하게 유명 배달 맛집을 뿌실 수도 있어요. 평소 땡기던 메뉴나 못 먹는 음식, 선호하는 주종(와인, 하이볼, 맥주, 무알콜 등)이 있다면 편하게 알려주세요!",
+
+      // 6. 🐾 특별 게스트 콩이 안내 (15kg 진도믹스)
+      dogProfileBadge: "15kg 진도믹스 ✕ 쫄보 순둥이",
+      dogNoticeTitle: "마스코트 콩이 프로필 & 친해지는 법 🐾",
+      dogNotice: "15kg 진도믹스 콩이가 함께합니다 (듬직하지만 완전 겁쟁이예요!)",
+      dogTip1: "15kg의 듬직한 중형견이지만, 사실 세상 순하고 쫄보인 '극I' 성격입니다.",
+      dogTip2: "갑자기 다가가거나 쓰다듬으려 하면 놀랄 수 있으니, 콩이가 먼저 냄새 맡고 올 때까지 '자연스럽게 무시'해 주시면 금방 마음을 엽니다!",
+      dogTip3: "절대 물거나 해치지 않는 세상 순둥이니 걱정 마세요.",
+
+      // 7. 선물 사양 안내
+      giftTitle: "두 손은 무조건 가볍게! (선물 절대 사양 🤍)",
+      giftDetail: "휴지, 디퓨저, 세제 등 집들이 선물은 정말 두 손 모아 정중히 사양합니다! 맛있는 음식 먹고 신나게 수다 떨 '가벼운 마음'만 챙겨와 주세요.",
+
+      // 8. 연락처
+      phoneSubin: "010-4521-4294",
+      phoneHyoik: "010-6417-7871",
+
+      // 9. 지도 검색 키워드
+      mapSearchQuery: "인천 남동구 만수로94번길 21 캐슬베리"
+    };
+  </script>
+</head>
+<body class="flex justify-center items-start min-h-screen p-0 sm:py-6 selection:bg-warm-200">
+
+  <!-- 모바일 메인 컨테이너 (최대 430px) -->
+  <main class="w-full max-w-[430px] bg-warm-50 shadow-2xl overflow-hidden relative sm:rounded-[36px] border border-warm-200/60 pb-16">
+    
+    <!-- TOP 헤더 커버 섹션 -->
+    <section class="relative bg-gradient-to-b from-warm-100/90 to-warm-50 pt-14 pb-9 px-6 text-center border-b border-warm-200/50">
+      
+      <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white shadow-soft text-warm-600 mb-5 border border-warm-200/50 relative">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span class="absolute -bottom-1 -right-1 text-base">🐾</span>
+      </div>
+
+      <p id="txt-header-sub" class="text-[11px] uppercase tracking-[0.22em] font-bold text-warm-500 mb-2.5"></p>
+      <h1 id="txt-main-title" class="text-[25px] font-bold text-warm-900 leading-snug whitespace-pre-line tracking-tight mb-3"></h1>
+
+      <!-- 시즌 2 뱃지 -->
+      <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-warm-200/60 border border-warm-300/70 text-[11px] font-semibold text-warm-800 mb-4 max-w-[95%]">
+        <span id="txt-subtitle"></span>
+      </div>
+
+      <div class="flex items-center justify-center gap-2 my-2">
+        <span class="w-8 h-[1px] bg-warm-300"></span>
+        <span class="w-1.5 h-1.5 rounded-full bg-point-terracotta"></span>
+        <span class="w-8 h-[1px] bg-warm-300"></span>
+      </div>
+
+      <div class="inline-block mt-3 px-4 py-2 rounded-2xl bg-white/90 border border-warm-200/70 shadow-sm backdrop-blur-sm">
+        <p class="text-xs text-warm-500 font-medium">Dear. Special Guests</p>
+        <p id="txt-guest-names" class="text-sm font-bold text-warm-900 mt-0.5"></p>
+      </div>
+    </section>
+
+    <!-- 본문 내용 -->
+    <div class="px-5 py-6 space-y-6">
+
+      <!-- 1. 호스트 소개 & 다정한 웰컴 레터 카드 (시즌2 레벨업 위트) -->
+      <section class="bg-white rounded-3xl p-6 shadow-soft border border-warm-200/60 relative overflow-hidden">
+        <div class="absolute -top-6 -right-6 w-24 h-24 bg-warm-100/60 rounded-full pointer-events-none"></div>
+
+        <div class="flex flex-wrap items-center gap-1.5 mb-4 text-xs">
+          <span class="px-2.5 py-1 rounded-lg bg-point-sage/15 text-point-sage font-bold">
+            🏠 집주인 수빈
+          </span>
+          <span class="px-2.5 py-1 rounded-lg bg-point-terracotta/10 text-point-terracotta font-bold">
+            🙋‍♂️ 특급 서포터 효익
+          </span>
+          <span class="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-800 font-bold">
+            🐶 마스코트 콩이
+          </span>
+        </div>
+
+        <div class="text-[14.5px] leading-relaxed text-warm-800 space-y-3 font-normal">
+          <p>
+            제가 드디어 혼자만의 첫 보금자리를 마련했어요! 지난주에 1차 집들이를 성공적으로 치르며 <strong>호스트 스킬 레벨업을 완료</strong>했답니다 ✌️
+          </p>
+          <p>
+            이번 2회차는 제가 정말 애정하는 우리 <strong>윤희</strong>와 이야기로만 전해 듣다 드디어 뵙는 소중한 <strong>짝꿍님</strong>을 위해 훨씬 더 능숙하고 여유롭게 준비하고 있어요!
+          </p>
+          <p class="bg-warm-50 p-3 rounded-2xl border border-warm-100 text-xs leading-relaxed text-warm-700">
+            처음 뵙는 자리라 짝꿍님이 어색해하실까 봐 걱정은 절대 NO! 든든한 조력자 <strong>효익 오빠</strong>와 순둥이 <strong>콩이</strong>까지 함께하니, 편안한 <strong>더블 데이트</strong>처럼 웃고 떠들며 맛있는 저녁 함께해요 🌿
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. 일시 및 장소 상세 카드 -->
+      <section class="bg-white rounded-3xl p-6 shadow-soft border border-warm-200/60 space-y-5">
+        
+        <div class="flex items-center gap-2.5 pb-3 border-b border-warm-100">
+          <span class="flex items-center justify-center w-6 h-6 rounded-lg bg-warm-100 text-warm-700">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </span>
+          <h2 class="text-sm font-bold text-warm-900 tracking-tight">초대 일시 & 찾아오시는 길</h2>
+        </div>
+
+        <!-- 일시 -->
+        <div class="flex items-start gap-3.5">
+          <div class="w-8 h-8 rounded-xl bg-warm-100 flex items-center justify-center text-warm-700 shrink-0 mt-0.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-[11px] font-bold text-warm-500 uppercase tracking-wider block">DATE & TIME</span>
+            <p id="txt-date" class="text-[16px] font-bold text-warm-900 mt-0.5"></p>
+            <p id="txt-time" class="text-sm font-semibold text-point-terracotta mt-0.5"></p>
+          </div>
+        </div>
+
+        <!-- 주소 및 원클릭 복사 -->
+        <div class="flex items-start gap-3.5 pt-4 border-t border-warm-100/80">
+          <div class="w-8 h-8 rounded-xl bg-warm-100 flex items-center justify-center text-warm-700 shrink-0 mt-0.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <span class="text-[11px] font-bold text-warm-500 uppercase tracking-wider block">ADDRESS</span>
+            <p id="txt-address" class="text-[14.5px] font-bold text-warm-900 mt-0.5 leading-snug"></p>
+            
+            <button 
+              onclick="copyAddress()" 
+              class="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-warm-100 hover:bg-warm-200 active:scale-95 text-warm-800 text-xs font-bold transition-all shadow-sm border border-warm-200/80">
+              <svg class="w-3.5 h-3.5 text-warm-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              <span>주소 텍스트 복사하기</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 지도 바로가기 버튼 2개 -->
+        <div class="pt-2">
+          <p class="text-[11px] text-warm-500 font-medium mb-2">원하시는 지도 앱으로 바로 길을 찾아보세요</p>
+          <div class="grid grid-cols-2 gap-2.5">
+            <a 
+              id="link-naver-map"
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-2xl bg-[#03C75A]/10 hover:bg-[#03C75A]/20 active:scale-[0.98] transition-all border border-[#03C75A]/25">
+              <span class="w-5 h-5 rounded-full bg-[#03C75A] text-white flex items-center justify-center text-[11px] font-black">N</span>
+              <span class="text-xs font-bold text-[#028b3f]">네이버 지도</span>
+            </a>
+
+            <a 
+              id="link-kakao-map"
+              href="#" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-2xl bg-[#FEE500]/30 hover:bg-[#FEE500]/45 active:scale-[0.98] transition-all border border-[#E6CE00]">
+              <span class="w-5 h-5 rounded-full bg-[#3C1E1E] text-[#FEE500] flex items-center justify-center text-[10px] font-black">K</span>
+              <span class="text-xs font-bold text-[#3C1E1E]">카카오맵</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 주차 상세 안내 & 다이소 골목 꿀팁 -->
+        <div class="bg-warm-100/70 rounded-2xl p-4 border border-warm-200/80">
+          <div class="flex items-center gap-1.5 font-bold text-xs text-warm-900 mb-1.5">
+            <span class="text-point-terracotta">📍</span>
+            <span id="txt-parking-title"></span>
+          </div>
+          <p id="txt-parking-tip" class="text-xs leading-relaxed text-warm-700"></p>
+        </div>
+
+      </section>
+
+      <!-- 3. 🐾 [마스코트 콩이 프로필 & 친해지는 법] -->
+      <section class="bg-gradient-to-br from-amber-50/80 via-white to-warm-50 rounded-3xl p-6 shadow-soft border border-amber-200/70 relative overflow-hidden">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">🐶</span>
+            <div>
+              <span class="text-[10px] uppercase font-bold tracking-wider text-amber-800/80 block">SPECIAL GUEST</span>
+              <h3 id="txt-dog-title" class="text-sm font-bold text-warm-900"></h3>
+            </div>
+          </div>
+          <span id="txt-dog-badge" class="px-2.5 py-1 rounded-full bg-amber-100/90 text-amber-800 text-[11px] font-bold border border-amber-200"></span>
+        </div>
+
+        <p id="txt-dog-notice" class="text-xs text-warm-700 leading-relaxed mb-4 bg-white/70 p-3 rounded-2xl border border-warm-100 font-medium"></p>
+
+        <!-- 친해지는 3가지 팁 -->
+        <div class="space-y-2.5">
+          <p class="text-[11px] font-bold text-warm-800 flex items-center gap-1">
+            <span>💡</span> 콩이와 금방 친해지는 꿀팁
+          </p>
+
+          <div class="flex items-start gap-2.5 bg-white p-3 rounded-2xl border border-warm-200/60 shadow-xs">
+            <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+            <p id="txt-dog-tip1" class="text-xs text-warm-700 leading-snug"></p>
+          </div>
+
+          <div class="flex items-start gap-2.5 bg-white p-3 rounded-2xl border border-warm-200/60 shadow-xs">
+            <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+            <p id="txt-dog-tip2" class="text-xs text-warm-700 leading-snug"></p>
+          </div>
+
+          <div class="flex items-start gap-2.5 bg-white p-3 rounded-2xl border border-warm-200/60 shadow-xs">
+            <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+            <p id="txt-dog-tip3" class="text-xs text-emerald-800 leading-snug font-medium"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 🍽️ 식사 취향존 (홈쿡 vs 배달 맛집) -->
+      <section class="bg-white rounded-3xl p-5 shadow-soft border border-warm-200/60">
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="w-9 h-9 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0">
+            <span class="text-lg">🍽️</span>
+          </div>
+          <div>
+            <h3 id="txt-food-title" class="text-xs font-bold text-warm-900"></h3>
+            <p class="text-[11px] text-warm-500">두 분이 원하시는 방식 그대로 맞춰드릴게요!</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 mb-3">
+          <div class="p-2.5 rounded-xl bg-warm-50 border border-warm-200/60 text-center">
+            <span class="text-base block mb-0.5">🍳</span>
+            <span class="text-[11px] font-bold text-warm-800 block">정성 홈쿡 요리</span>
+            <span class="text-[10px] text-warm-500">따뜻한 집밥 요리</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-warm-50 border border-warm-200/60 text-center">
+            <span class="text-base block mb-0.5">🍕</span>
+            <span class="text-[11px] font-bold text-warm-800 block">맛있는 배달 맛집</span>
+            <span class="text-[10px] text-warm-500">편하고 푸짐하게 정복</span>
+          </div>
+        </div>
+
+        <p id="txt-food-notice" class="text-xs text-warm-700 leading-relaxed bg-warm-50/60 p-3 rounded-2xl border border-warm-100"></p>
+      </section>
+
+      <!-- 5. 마음 편한 방문 안내 (선물 사양) -->
+      <section class="bg-white rounded-3xl p-5 shadow-soft border border-warm-200/60 flex items-start gap-3.5">
+        <div class="w-10 h-10 rounded-2xl bg-rose-50 text-point-terracotta flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V4a2 2 0 10-2 2h2zm-8 4h16v9a2 2 0 01-2 2H6a2 2 0 01-2-2v-9z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 id="txt-gift-title" class="text-xs font-bold text-warm-900"></h3>
+          <p id="txt-gift-detail" class="text-xs text-warm-700 leading-relaxed mt-1"></p>
+        </div>
+      </section>
+
+      <!-- 6. 비상 연락처 (전화 바로 걸기 버튼) -->
+      <section class="bg-white rounded-3xl p-5 shadow-soft border border-warm-200/60">
+        <h3 class="text-xs font-bold text-warm-500 uppercase tracking-wider mb-3 text-center">도착 전이나 길 찾기 어려울 땐 편하게 전화 주세요</h3>
+        
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-warm-50 rounded-2xl p-3 text-center border border-warm-100 flex flex-col items-center">
+            <span class="text-[11px] font-semibold text-warm-500">집주인</span>
+            <span class="text-xs font-bold text-warm-900 mb-1">수빈</span>
+            <a 
+              id="btn-phone-subin"
+              href="tel:010-4521-4294" 
+              class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-warm-800 hover:bg-warm-900 text-white text-xs font-medium active:scale-95 transition-all shadow-sm">
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a11.042 11.042 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>전화 걸기</span>
+            </a>
+          </div>
+
+          <div class="bg-warm-50 rounded-2xl p-3 text-center border border-warm-100 flex flex-col items-center">
+            <span class="text-[11px] font-semibold text-warm-500">서포터 & 콩이아빠</span>
+            <span class="text-xs font-bold text-warm-900 mb-1">효익</span>
+            <a 
+              id="btn-phone-hyoik"
+              href="tel:010-6417-7871" 
+              class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-warm-800 hover:bg-warm-900 text-white text-xs font-medium active:scale-95 transition-all shadow-sm">
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a11.042 11.042 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>전화 걸기</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 감성 푸터 -->
+      <footer class="text-center pt-3 pb-2 space-y-1.5">
+        <p class="text-xs font-bold text-warm-800">
+          두 분 맞이할 생각에 셋 다 설레는 중이에요! 🤍
+        </p>
+        <p class="text-[11px] text-warm-500">
+          수빈 & 효익 & 콩이 올림 🐾
+        </p>
+      </footer>
+
+    </div>
+
+    <!-- 주소 복사 토스트 팝업 -->
+    <div 
+      id="toast" 
+      class="toast-enter fixed bottom-8 left-1/2 z-50 pointer-events-none flex items-center gap-2 bg-warm-900/95 backdrop-blur-md text-white px-5 py-3 rounded-full shadow-2xl text-xs font-semibold">
+      <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+      <span id="toast-message">주소가 클립보드에 복사되었습니다!</span>
+    </div>
+
+  </main>
+
+  <script>
+    function renderInvitation() {
+      if (typeof CONFIG === 'undefined') return;
+
+      setText('txt-header-sub', CONFIG.headerSubtitle || "HOUSEWARMING PART 2");
+      setText('txt-main-title', CONFIG.mainTitle);
+      setText('txt-subtitle', CONFIG.subTitle);
+      setText('txt-guest-names', CONFIG.guestNames);
+      setText('txt-date', CONFIG.date);
+      setText('txt-time', CONFIG.time);
+      setText('txt-address', CONFIG.address);
+
+      setText('txt-parking-title', CONFIG.parkingTitle);
+      setText('txt-parking-tip', CONFIG.parkingTip);
+
+      setText('txt-dog-title', CONFIG.dogNoticeTitle);
+      setText('txt-dog-badge', CONFIG.dogProfileBadge);
+      setText('txt-dog-notice', CONFIG.dogNotice);
+      setText('txt-dog-tip1', CONFIG.dogTip1);
+      setText('txt-dog-tip2', CONFIG.dogTip2);
+      setText('txt-dog-tip3', CONFIG.dogTip3);
+
+      setText('txt-food-title', CONFIG.foodNoticeTitle);
+      setText('txt-food-notice', CONFIG.foodNotice);
+      setText('txt-gift-title', CONFIG.giftTitle);
+      setText('txt-gift-detail', CONFIG.giftDetail);
+
+      const btnSubin = document.getElementById('btn-phone-subin');
+      if (btnSubin && CONFIG.phoneSubin) {
+        btnSubin.href = `tel:${CONFIG.phoneSubin.replace(/[^0-9+]/g, '')}`;
+      }
+
+      const btnHyoik = document.getElementById('btn-phone-hyoik');
+      if (btnHyoik && CONFIG.phoneHyoik) {
+        btnHyoik.href = `tel:${CONFIG.phoneHyoik.replace(/[^0-9+]/g, '')}`;
+      }
+
+      const encodedQuery = encodeURIComponent(CONFIG.mapSearchQuery || CONFIG.address);
+      const naverMap = document.getElementById('link-naver-map');
+      if (naverMap) naverMap.href = `https://map.naver.com/p/search/${encodedQuery}`;
+
+      const kakaoMap = document.getElementById('link-kakao-map');
+      if (kakaoMap) kakaoMap.href = `https://map.kakao.com/link/search/${encodedQuery}`;
+    }
+
+    function setText(id, value) {
+      const el = document.getElementById(id);
+      if (el && value) el.innerText = value;
+    }
+
+    function copyAddress() {
+      const textToCopy = CONFIG.address;
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(textToCopy)
+          .then(() => showToast("주소가 클립보드에 복사되었습니다!"))
+          .catch(() => fallbackCopy(textToCopy));
+      } else {
+        fallbackCopy(textToCopy);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showToast("주소가 클립보드에 복사되었습니다!");
+      } catch (err) {
+        showToast("주소 복사 실패. 직접 복사해 주세요.");
+      }
+      document.body.removeChild(textArea);
+    }
+
+    let toastTimeout = null;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msgEl = document.getElementById('toast-message');
+      if (!toast) return;
+      if (msgEl) msgEl.innerText = message;
+      toast.classList.remove('toast-enter');
+      toast.classList.add('toast-show');
+
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('toast-show');
+        toast.classList.add('toast-enter');
+      }, 2500);
+    }
+
+    document.addEventListener('DOMContentLoaded', renderInvitation);
+  </script>
+</body>
+</html>
